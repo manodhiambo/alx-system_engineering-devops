@@ -1,2 +1,2 @@
 #!/bin/bash
-cd /tmp/PRINT iamafile.s
+PRINT iamafile #cd/tmp
