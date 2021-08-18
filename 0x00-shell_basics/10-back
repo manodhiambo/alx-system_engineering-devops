@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "cd...s"
+chmod u+x cd...script

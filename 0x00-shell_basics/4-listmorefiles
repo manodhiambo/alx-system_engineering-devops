@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "ls -a"
+chmod u+x ls -la.script

@@ -1,2 +1,2 @@
 #!/bin/bash
-echo"(d /tmp rmdir my_first_directory).sh"
+chmod u+x cd /tmp rmdir my_first_directory.script
