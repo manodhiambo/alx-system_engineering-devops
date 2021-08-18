@@ -1,2 +1,2 @@
 #!/bin/bash
-cd /tmp rmdir my_first_directory.s
+rm -r my_first_directory #cd /tmp
