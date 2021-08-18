@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod u+x .s echo "Another cool project" 
+chmod u+x  echo "ls" 

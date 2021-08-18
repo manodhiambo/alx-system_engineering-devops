@@ -1,2 +1,2 @@
 #!/bin/bas
-chmod u+x .s echo "This is a cool project"
+chmod u+x echo "cd.sh"

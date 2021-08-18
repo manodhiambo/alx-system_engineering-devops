@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod u+x .s echo "My project 1" 
+chmod u+x  echo "pwd.s" 
