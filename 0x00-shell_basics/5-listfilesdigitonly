@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod u+x ls -l.script
+chmod u+x ls -l.s
