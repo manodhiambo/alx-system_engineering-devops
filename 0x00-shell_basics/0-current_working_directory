@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "My project 1" chmod u+x
+chmod u+x .s echo "My project 1" 
