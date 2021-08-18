@@ -1,2 +1,2 @@
-#!/bin/bas
-chmod u+x echo "cd.sh"
+#!/bin/bash
+echo "cd"
