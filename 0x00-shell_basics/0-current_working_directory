@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod u+x  echo "The pwd command".s 
+chmod u+x  echo "pwd" 
