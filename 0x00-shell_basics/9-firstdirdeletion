@@ -1,0 +1,2 @@
+#!/bin/bash
+echo"(d /tmp rmdir my_first_directory).sh"
