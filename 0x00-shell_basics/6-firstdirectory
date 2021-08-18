@@ -1,2 +1,2 @@
 #!/bin/bash
-cd_/tmp/_mkdir my_first_directory.s
+ mkdir my_first_directory #cd /tmp/
