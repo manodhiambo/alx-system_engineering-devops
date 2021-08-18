@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod u+x cd /tmp rmdir my_first_directory.s
+cd /tmp rmdir my_first_directory.s

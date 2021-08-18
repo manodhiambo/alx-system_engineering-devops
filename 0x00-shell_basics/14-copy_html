@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod u+x cp programs.html/*.c . /home.s
+cp programs.html/*.c . /home.s

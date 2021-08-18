@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod u+x cd /tmp/my_first_directory rm betty.s
+cd /tmp/my_first_directory rm betty.s
