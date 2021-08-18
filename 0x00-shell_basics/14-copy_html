@@ -1,2 +1,2 @@
 #!/bin/bash
-cp programs.html/*.c . /home.s
+cp -u .html alx-system_engineering-devops /
