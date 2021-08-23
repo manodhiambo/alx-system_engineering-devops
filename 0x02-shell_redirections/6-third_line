@@ -1,0 +1,2 @@
+#!/bin/bash
+xargs -d"|" < iacta | cut -d"|" -f3 #directory /sed
