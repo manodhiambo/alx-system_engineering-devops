@@ -1,3 +1,2 @@
-0-hello_world
-README.md
-echo
+#!/bin/bash
+echo "Hello, World"
