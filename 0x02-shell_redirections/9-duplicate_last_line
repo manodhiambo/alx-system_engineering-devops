@@ -1,2 +1,2 @@
 #!/bin/bash
-grep 'duplicate entry tail' *.iacta
+echo -en "" | tail --lines=1 iacta >> iacta
