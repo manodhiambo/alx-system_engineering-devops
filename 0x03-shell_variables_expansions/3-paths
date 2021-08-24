@@ -1,2 +1,2 @@
 #!/bin/bash
-find /path/to/directory -type d \! -name . -prune -exec printf x \; | wc -c PATH
+ls -ld PATH/* | wc -l
