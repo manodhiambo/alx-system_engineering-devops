@@ -1,0 +1,2 @@
+#!/bin/bash
+export BINARY=1*10^2
