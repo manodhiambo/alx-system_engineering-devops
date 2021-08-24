@@ -1,2 +1,2 @@
 #!/bin/bash
-export NUM=0.00
+printf "%0.2f\n" $NUM
