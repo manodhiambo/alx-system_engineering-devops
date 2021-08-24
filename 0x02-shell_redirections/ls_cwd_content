@@ -1,0 +1,17 @@
+total 20
+drwxr-xr-x 1 Meccer 197608  0 Aug 23 23:41 ./
+drwxr-xr-x 1 Meccer 197608  0 Aug 23 10:21 ../
+-rwxr-xr-x 1 Meccer 197608 34 Aug 23 22:20 0-hello_world*
+-rwxr-xr-x 1 Meccer 197608 41 Aug 23 21:58 1-confused_smiley*
+-rwxr-xr-x 1 Meccer 197608 28 Aug 23 22:58 2-hellofile*
+-rwxr-xr-x 1 Meccer 197608 39 Aug 23 22:56 3-twofiles*
+-rwxr-xr-x 1 Meccer 197608 33 Aug 23 23:02 4-lastlines*
+-rwxr-xr-x 1 Meccer 197608 33 Aug 23 23:05 5-firstlines*
+-rwxr-xr-x 1 Meccer 197608 64 Aug 23 23:24 6-third_line*
+-rwxr-xr-x 1 Meccer 197608 72 Aug 23 23:34 7-file*
+-rwxr-xr-x 1 Meccer 197608 19 Aug 23 23:38 8-cwd_state*
+-rw-r--r-- 1 Meccer 197608 40 Aug 23 10:39 README.md
+-rw-r--r-- 1 Meccer 197608 43 Aug 23 11:34 REAME.md
+-rw-r--r-- 1 Meccer 197608  0 Aug 23 11:16 echo
+-rw-r--r-- 1 Meccer 197608  0 Aug 23 23:41 ls_cwd_content
+-rw-r--r-- 1 Meccer 197608 15 Aug 23 22:35 std.o
