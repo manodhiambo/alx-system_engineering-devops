@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Bash script that displays a list of currently running processes
+# ps: PIDs for the processes currently on the system
+# a: Select all processes
+# u: Select all processes on a terminal, including those of other users
+# x: Select processes without controlling ttys
+# -H: Show process hierarchy (forest)
+ps aux -H
