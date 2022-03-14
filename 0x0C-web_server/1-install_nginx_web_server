@@ -2,5 +2,13 @@
 # Configures NGINX
 sudo apt-get update -y
 sudo apt-get install nginx -y
-echo "Holberton School" > /var/www/html/index.nginx-debian.html
-service nginx start
+# Adjust the firewall
+# sudo ufw enable -y
+sudo ufw allow 'OpenSSH'
+sudo ufw allow 'Nginx HTTP'
+# Take backup of the original index
+sudo cp /var/www/html/index.nginx-debian.html /var/www/html/bkup_index.nginx-debian.html
+# Changing to sudo for update the file
+sudo su
+echo "Hello World!" > /var/www/html/index.nginx-debian.html
+sudo service nginx start
