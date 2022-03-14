@@ -1,11 +1,10 @@
 #!/usr/bin/env bash
-#Configure the Nginx server to have a custom 404 page that contains a custom string
-sudo apt-get update
-sudo apt-get -y install nginx
-echo -e "Hello World!" | sudo tee /usr/share/nginx/html/index.html
-echo -e "Ceci n'est pas une page\n" | sudo tee /usr/share/nginx/html/custom_404.html
-new_string="\n\tlocation /redirect_me {\n\t\treturn 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n\t}\n"
-error_str="\n\terror_page 404 /custom_404.html;\n\tlocation = /custom_404.html {\n\t\troot /usr/share/nginx/html;\n\t\tinternal;\n\t}\n"
-sudo sed -i "37a\ $new_string" /etc/nginx/sites-enabled/default
-sudo sed -i "37a\ $error_str" /etc/nginx/sites-enabled/default
-sudo service nginx start
+# Configures NGINX
+sudo apt-get update -y
+sudo apt-get install nginx -y
+echo "Hello World!" > /var/www/html/index.nginx-debian.html
+echo "Ceci n'est pas une page" > /usr/share/nginx/html/custom_404.html
+new_string="server_name _;\n\trewrite ^\/redirect_me google.com permanent;"
+nstr2="\n\terror_page 404 \/custom_404.html;\n\tlocation = \/custom_404.html {\n\t\troot \/usr\/share\/nginx\/html;\n\t\tinternal;\n\t}"
+sed -i "s/server_name _;/$new_string$nstr2/" /etc/nginx/sites-enabled/default
+service nginx start
