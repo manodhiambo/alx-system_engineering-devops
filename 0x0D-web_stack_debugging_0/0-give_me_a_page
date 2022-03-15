@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Fix the error on container with apache
+service apache2 start
