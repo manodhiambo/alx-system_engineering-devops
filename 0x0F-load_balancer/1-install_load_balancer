@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Install and configure HAproxy on your lb-01 server
+# Instal $ conf HAproxy on your lb-01 server
 apt-get update -y
 apt-get install -y haproxy=1.6.\*
 
