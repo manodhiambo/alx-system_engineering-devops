@@ -1,21 +1,29 @@
 #!/usr/bin/env bash
-# script that will display information about subdomains
-# awk '{print $4}' is A record and $5 is the IP address
-info_Domain () {
-    A=$(dig $2.$1 | awk '/ANSWER SECTION:/{getline;print;}')
-    RE=$(echo $A | cut -d' ' -f 4)
-    IP=$(echo $A | cut -d' ' -f 5)
-    echo "The subdomain $2 is a $RE record and points to $IP"
+# this script outputs a string that returns domain records info
+
+world_wide_web () {
+
+    if [ "$2" ]
+    then
+	rec=$(dig "$2.$1" | grep 'ANSWER SECTION:' -A1 | awk '{if (NR > 1) {print $4}}')
+	#echo "$rec"
+	ip=$(dig "$2.$1" | grep 'ANSWER SECTION:' -A1 | awk '{if (NR > 1) {print $5}}')
+	#echo "$ip"
+	echo "The subdomain $2 is a $rec record and points to $ip"
+    else
+	for i in "www" "lb-01" "web-01" "web-02"; do
+	    rec=$( dig "$i.$1" | grep 'ANSWER SECTION:' -A1 | awk '{if (NR > 1) {print $4}}')
+	    ip=$( dig "$i.$1" | grep 'ANSWER SECTION:' -A1 | awk '{if (NR > 1) {print $5}}')
+	    echo "The subdomain $i is a $rec record and points to $ip"
+	done
+    fi
+
+    return 0
 }
-if [ $# -lt 1 ]
+
+if [ "$2" ]
 then
-    echo "Usage: 1-world_wide_web DOMAIN SUBDOMAIN(optional)"
-elif [ $# -eq 1 ]
-then
-    info_Domain "$1" "www"
-    info_Domain "$1" "lb-01"
-    info_Domain "$1" "web-01"
-    info_Domain "$1" "web-02"
+    world_wide_web "$1" "$2"
 else
-    info_Domain "$1" "$2"
+    world_wide_web "$1"
 fi
