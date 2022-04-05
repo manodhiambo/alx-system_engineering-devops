@@ -11,8 +11,6 @@
 </ul>
 
 
-<img src="https://s3.amazonaws.com/intranet-projects-files/holbertonschool-sysadmin_devops/280/KkrkDHT.png"alt="MySQL">
-
 <h3>Resources</h3>
 
 <p><b>Read or watch:</b></p>
