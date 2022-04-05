@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Scritp that take a mysql backup and compress
+passwd="$1"
+mysqldump -u root -p"$passwd" --all-databases > backup.sql
+sudo tar -cvzf "$(date +"%d-%m-%y")".tar.gz backup.sql
