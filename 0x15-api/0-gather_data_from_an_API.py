@@ -1,31 +1,40 @@
 #!/usr/bin/python3
-""" Program that Gather data from an API """
-import requests
-from sys import argv
+""" Gather data from an API  """
 
 if __name__ == "__main__":
-    """ Program Entry point """
-    empId = argv[1]
-    url_todo = 'https://jsonplaceholder.typicode.com/todos'
-    url_user = 'https://jsonplaceholder.typicode.com/users'
-    payload1 = {'userId': empId}
-    payload2 = {'id': empId}
+    from requests import get
+    from sys import argv, exit
 
-    req_todo = requests.get(url_todo, params=payload1)
-    req_user = requests.get(url_user, params=payload2)
+    try:
+        id = argv[1]
+        is_int = int(id)
+    except:
+        exit()
 
-    # Getting the NUMBER_OF_DONE_TASKS and total tasks
-    total_tasks = req_todo.json()
-    done_tasks = []
-    for task in total_tasks:
-        if (task.get('completed') is True):
-            done_tasks.append(task)
+    url_user = "https://jsonplaceholder.typicode.com/users?id=" + id
+    url_todo = "https://jsonplaceholder.typicode.com/todos?userId=" + id
 
-    # Employee name from users
-    user_data = req_user.json()
-    emp_name = user_data[0].get('name')
+    r_user = get(url_user)
+    r_todo = get(url_todo)
 
-    print("Employee {:s} is done with tasks({:d}/{:d}):".format(
-        emp_name, len(done_tasks), len(total_tasks)))
-    for task in done_tasks:
-        print("\t {}".format(task.get('title')))
+    try:
+        js_user = r_user.json()
+        js_todo = r_todo.json()
+
+    except ValueError:
+        print("Not a valid JSON")
+
+    if js_user and js_todo:
+        EMPLOYEE_NAME = js_user[0].get('name')
+        TOTAL_NUMBER_OF_TASKS = len(js_todo)
+        NUMBER_OF_DONE_TASKS = sum(item.get("completed")
+                                   for item in js_todo if item)
+
+        print("Employee {} is done with tasks({}/{}):"
+              .format(EMPLOYEE_NAME,
+                      NUMBER_OF_DONE_TASKS,
+                      TOTAL_NUMBER_OF_TASKS))
+        for todo in js_todo:
+            TASK_TITLE = todo.get('title')
+            if todo.get("completed"):
+                print("\t {}".format(TASK_TITLE))
