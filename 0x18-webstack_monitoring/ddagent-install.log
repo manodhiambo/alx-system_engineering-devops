@@ -1,0 +1,128 @@
+[34m
+* Datadog Agent install script v1.8.0
+[0m
+[34m
+* Installing apt-transport-https, curl and gnupg
+[0m
+Get:1 http://repo.mysql.com trusty InRelease [34.0 kB]
+Ign http://archive.ubuntu.com trusty InRelease
+Hit http://archive.ubuntu.com trusty-updates InRelease
+Hit http://archive.ubuntu.com trusty-backports InRelease
+Hit http://security.ubuntu.com trusty-security InRelease
+Hit http://archive.ubuntu.com trusty Release.gpg
+Hit http://archive.ubuntu.com trusty Release
+Ign http://repo.mysql.com trusty InRelease
+Get:2 http://repo.mysql.com trusty/mysql-5.7-dmr amd64 Packages [3242 B]
+Hit http://archive.ubuntu.com trusty-updates/main amd64 Packages
+Hit http://archive.ubuntu.com trusty-updates/restricted amd64 Packages
+Hit http://archive.ubuntu.com trusty-updates/universe amd64 Packages
+Hit http://archive.ubuntu.com trusty-updates/multiverse amd64 Packages
+Get:3 https://deb.nodesource.com trusty InRelease
+Hit http://archive.ubuntu.com trusty-backports/main amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/restricted amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/universe amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/multiverse amd64 Packages
+Hit http://security.ubuntu.com trusty-security/main amd64 Packages
+Hit http://security.ubuntu.com trusty-security/restricted amd64 Packages
+Hit http://security.ubuntu.com trusty-security/universe amd64 Packages
+Hit http://security.ubuntu.com trusty-security/multiverse amd64 Packages
+Get:4 https://esm.ubuntu.com trusty-infra-security InRelease
+Get:5 https://esm.ubuntu.com trusty-infra-updates InRelease
+Ign https://deb.nodesource.com trusty InRelease
+Hit http://archive.ubuntu.com trusty/main amd64 Packages
+Hit https://deb.nodesource.com trusty/main Sources
+Hit http://archive.ubuntu.com trusty/restricted amd64 Packages
+Hit https://deb.nodesource.com trusty/main amd64 Packages
+Hit http://archive.ubuntu.com trusty/universe amd64 Packages
+Hit http://archive.ubuntu.com trusty/multiverse amd64 Packages
+Get:6 https://apt.datadoghq.com stable InRelease
+Ign https://apt.datadoghq.com stable InRelease
+Hit https://apt.datadoghq.com stable Release.gpg
+Hit https://esm.ubuntu.com trusty-infra-security/main amd64 Packages
+Hit https://apt.datadoghq.com stable Release
+Hit https://esm.ubuntu.com trusty-infra-updates/main amd64 Packages
+Fetched 76.5 kB in 17s (4500 B/s)
+Reading package lists...
+W: GPG error: http://repo.mysql.com trusty InRelease: The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 467B942D3A79BD29
+W: GPG error: https://deb.nodesource.com trusty InRelease: The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 1655A0AB68576280
+W: Duplicate sources.list entry http://archive.ubuntu.com/ubuntu/ trusty-backports/main amd64 Packages (/var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_trusty-backports_main_binary-amd64_Packages.gz)
+W: Duplicate sources.list entry http://archive.ubuntu.com/ubuntu/ trusty-backports/restricted amd64 Packages (/var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_trusty-backports_restricted_binary-amd64_Packages.gz)
+W: Duplicate sources.list entry http://archive.ubuntu.com/ubuntu/ trusty-backports/universe amd64 Packages (/var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_trusty-backports_universe_binary-amd64_Packages.gz)
+W: Duplicate sources.list entry http://archive.ubuntu.com/ubuntu/ trusty-backports/multiverse amd64 Packages (/var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_trusty-backports_multiverse_binary-amd64_Packages.gz)
+W: Duplicate sources.list entry http://repo.mysql.com/apt/ubuntu/ trusty/mysql-5.7-dmr amd64 Packages (/var/lib/apt/lists/repo.mysql.com_apt_ubuntu_dists_trusty_mysql-5.7-dmr_binary-amd64_Packages.gz)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+apt-transport-https is already the newest version.
+curl is already the newest version.
+gnupg is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+W: Duplicate sources.list entry http://archive.ubuntu.com/ubuntu/ trusty-backports/main amd64 Packages (/var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_trusty-backports_main_binary-amd64_Packages.gz)
+W: Duplicate sources.list entry http://archive.ubuntu.com/ubuntu/ trusty-backports/restricted amd64 Packages (/var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_trusty-backports_restricted_binary-amd64_Packages.gz)
+W: Duplicate sources.list entry http://archive.ubuntu.com/ubuntu/ trusty-backports/universe amd64 Packages (/var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_trusty-backports_universe_binary-amd64_Packages.gz)
+W: Duplicate sources.list entry http://archive.ubuntu.com/ubuntu/ trusty-backports/multiverse amd64 Packages (/var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_trusty-backports_multiverse_binary-amd64_Packages.gz)
+W: Duplicate sources.list entry http://repo.mysql.com/apt/ubuntu/ trusty/mysql-5.7-dmr amd64 Packages (/var/lib/apt/lists/repo.mysql.com_apt_ubuntu_dists_trusty_mysql-5.7-dmr_binary-amd64_Packages.gz)
+W: You may want to run apt-get update to correct these problems
+[34m
+* Installing APT package sources for Datadog
+[0m
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  9001  100  9001    0     0  84073      0 --:--:-- --:--:-- --:--:--  549k
+gpg: key 382E94DE: "Datadog, Inc <package@datadoghq.com>" not changed
+gpg: Total number processed: 1
+gpg:              unchanged: 1
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  6226  100  6226    0     0  61296      0 --:--:-- --:--:-- --:--:--  552k
+gpg: key F14F620E: "Datadog, Inc. Master key (2020-09-08) <package+masterkey@datadoghq.com>" not changed
+gpg: Total number processed: 1
+gpg:              unchanged: 1
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  9001  100  9001    0     0   754k      0 --:--:-- --:--:-- --:--:--  799k
+gpg: key 382E94DE: "Datadog, Inc <package@datadoghq.com>" not changed
+gpg: Total number processed: 1
+gpg:              unchanged: 1
+[34m
+* Installing the Datadog Agent package
+[0m
+Get:1 https://apt.datadoghq.com stable InRelease
+Ign https://apt.datadoghq.com stable InRelease
+Hit https://apt.datadoghq.com stable Release.gpg
+Hit https://apt.datadoghq.com stable Release
+Hit https://apt.datadoghq.com stable/7 amd64 Packages
+Reading package lists...
+  [33mInstalling package: datadog-agent
+[0m
+Reading package lists...
+Building dependency tree...
+Reading state information...
+datadog-signing-keys is already the newest version.
+datadog-agent is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+W: Duplicate sources.list entry http://archive.ubuntu.com/ubuntu/ trusty-backports/main amd64 Packages (/var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_trusty-backports_main_binary-amd64_Packages.gz)
+W: Duplicate sources.list entry http://archive.ubuntu.com/ubuntu/ trusty-backports/restricted amd64 Packages (/var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_trusty-backports_restricted_binary-amd64_Packages.gz)
+W: Duplicate sources.list entry http://archive.ubuntu.com/ubuntu/ trusty-backports/universe amd64 Packages (/var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_trusty-backports_universe_binary-amd64_Packages.gz)
+W: Duplicate sources.list entry http://archive.ubuntu.com/ubuntu/ trusty-backports/multiverse amd64 Packages (/var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_trusty-backports_multiverse_binary-amd64_Packages.gz)
+W: Duplicate sources.list entry http://repo.mysql.com/apt/ubuntu/ trusty/mysql-5.7-dmr amd64 Packages (/var/lib/apt/lists/repo.mysql.com_apt_ubuntu_dists_trusty_mysql-5.7-dmr_binary-amd64_Packages.gz)
+W: You may want to run apt-get update to correct these problems
+[34m
+* Keeping old /etc/datadog-agent/datadog.yaml configuration file
+[0m
+[34m* Starting the Datadog Agent...
+[0m
+[32m
+
+Your Datadog Agent is running and functioning properly. It will continue
+to run in the background and submit metrics to Datadog.
+
+If you ever want to stop the Datadog Agent, run:
+
+     stop datadog-agent
+
+And to run it again run:
+
+     start datadog-agent
+
+[0m
